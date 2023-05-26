@@ -8,13 +8,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { SeeOrdersComponent } from './see-orders/see-orders.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     OrderFormComponent,
-    SeeOrdersComponent
+    SeeOrdersComponent,
+    EditComponent,
+    LoginComponent,
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,31 @@
-<p>see-orders works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-light">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile No.</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of user, index as i">
+                        <td>{{i + 1}}</td>
+                        <td>{{item._id}}</td>
+                        <td>{{item.fullname}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.contact}}</td>
+                        <td><button class="btn btn-info" [routerLink]="['/edit/' + item._id]">Edit</button></td>
+                        <td><button class="btn btn-danger" (click)="delete(item._id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

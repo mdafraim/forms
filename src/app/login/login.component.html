@@ -1,0 +1,27 @@
+<div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4">
+          <form class="form-container" [formGroup]="singIn" (ngSubmit)="login()">
+          <div class="form-group">
+            <h4 class="text-center font-weight-bold"> Login </h4>
+            <label for="email">Email</label>
+             <input type="email" class="form-control" id="email" formControlName="email" aria-describeby="usernameHelp" placeholder="Enter Email">
+             <div class="alert alert-danger" *ngIf="email?.touched && email?.invalid">
+                Please Enter Valid Email..!
+             </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password">
+            <div class="alert alert-danger" *ngIf="password?.touched && password?.invalid">
+                Please Enter Valid Password..!
+            </div>
+          </div>
+          <button type="Sign in" class="btn btn-primary btn-block" [disabled]="singIn.invalid">Sign in</button>
+          <div class="form-footer">
+            <p> Don't have an account? <a href="signUp">Sign Up</a></p>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
